@@ -1,0 +1,22 @@
+Commands Used in Firewall Task (UFW - Linux)
+
+1. Install UFW:
+   sudo apt update && sudo apt install ufw -y
+
+2. Enable UFW:
+   sudo ufw enable
+
+3. Allow SSH (Port 22):
+   sudo ufw allow 22/tcp
+
+4. List current firewall rules:
+   sudo ufw status numbered
+
+5. Block Telnet (Port 23):
+   sudo ufw deny 23/tcp
+
+6. Test blocked port with Netcat:
+   nc -zv 127.0.0.1 23
+
+7. Remove test block rule:
+   sudo ufw delete deny 23/tcp
